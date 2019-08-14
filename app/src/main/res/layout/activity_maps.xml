@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/linear1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/edTenTimKiem"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="2"
+            android:hint="Tên địa chỉ" />
+
+        <Button
+            android:id="@+id/btnSearch"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/bt_radius"
+            android:onClick="onClick"
+            android:text="Tìm kiếm"
+            android:textAllCaps="false"
+            android:textSize="14dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear1"
+        android:layout_marginTop="3dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnHospitals"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:background="@drawable/bt_radius"
+            android:text="Hospitals"
+            android:textAllCaps="false"
+            android:textSize="14dp" />
+
+        <Button
+            android:id="@+id/btnRestaurent"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="2dp"
+            android:onClick="onClick"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/bt_radius"
+            android:text="Restaurent"
+            android:textAllCaps="false"
+            android:textSize="14dp" />
+
+        <Button
+            android:id="@+id/btnSchools"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:background="@drawable/bt_radius"
+            android:text="Schools"
+            android:textAllCaps="false"
+            android:textSize="14dp" />
+    </LinearLayout>
+
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/linear2"
+        android:layout_marginTop="2dp"
+        tools:context="com.lvh.demomap.MapsActivity" />
+</RelativeLayout>
